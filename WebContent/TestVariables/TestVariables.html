@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript Variables</title>
+
+<!-- Script to get the user input into variables and display them back on the same page -->
+<script type="text/javascript" src="TestVaribles.js"></script>
+</head>
+
+<body>
+	<h1>JavaScript Variables</h1>
+
+	<form method="get">
+		<!--Text Box for Student ID  -->
+		Student Id:<br> <input type="text" id="studentId" /><br>
+		<!--Text Box for Student Name  -->
+		Student Name:<br> <input type="text" id="studentName" /><br>
+		<!--Button for submitting the data  -->
+		<br> <input type="button" value="Submit"
+			onclick="return displayUserInput()" />
+	</form>
+
+	<!-- Paragraph to display user input -->
+	<p>
+		<span id="display_message"></span>
+	</p>
+
+</body>
+</html>

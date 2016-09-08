@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SJSU Food Choice Review</title>
+<script type="text/javascript" src="TestLocalStorage.js"></script>
+
+</head>
+<body>
+	<h1>SJSU Food Choice Review</h1>
+	Student Id :
+	<!-- Textbox for entering student Id -->
+	<input type="text" id="studentID" />
+	<br> Food Choice :
+	<!-- Dropdown for selecting food choice -->
+	<select id="food_choice">
+		<option value="Indian">Indian</option>
+		<option value="Thai">Thai</option>
+		<option value="American">American</option>
+
+	</select>
+	<br>
+	<br>
+	<input type="button" value="Submit"
+		onclick="retieveAndStoreFoodChoice();return false;" />&emsp;
+	<input type="button" value="Previous Choice"
+		onclick="displayPreviousFoodChoice();return false;" />
+	<p>
+		<span id="prev_food_choice"></span>
+	</p>
+
+</body>
+</html>

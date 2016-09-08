@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript Functions</title>
+<script type="text/javascript" src="TestGeolocation.js"></script>
+<!-- Include the javascript files of google maps -->
+<script type="text/javascript"
+	src="http://maps.googleapis.com/maps/api/js"></script>
+
+</head>
+<body>
+
+	<p>Click the button to get your location!!</p>
+
+	<button id="display_location">Current Location</button>
+
+	<!-- Section where the google map is displayed with the current location -->
+	<div id="googleMap" style="width: 1000px; height: 600px;"></div>
+	<!-- Section to display any error message -->
+	<p id="display_msg" />
+
+	<script type="text/javascript">
+		//Get the button on whose click even the map will be displayed with the current location
+		var buttonElement = document.getElementById('display_location');
+		google.maps.event.addDomListener(buttonElement, 'click', getLocation);
+	</script>
+
+</body>
+</html>
+

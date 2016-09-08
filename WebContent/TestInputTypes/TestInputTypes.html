@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Student Form</title>
+<script type="text/javascript" src="TestInputTypes.js"></script>
+</head>
+<body>
+	<h1>Student Form</h1>
+	<br>
+	<!-- Form containing all the fields required to retrieve the student personal information
+	Following attributes have been used :
+	autocomplete : Helps in giving suggestions in a drop down to the user with the previously 
+					filled data
+	placeholder : To direct the user about what value/pattern should be filled into the field
+	required : makes the user to fill the field compulsory
+	autofocus : focuses the mouse pointer into the field on loading the form
+	pattern : Lets us restrict the values and the format  of the input
+	title : For helping the user with the pattern of the input				
+	 -->
+	<form id='studentForm' action="" autocomplete="on" method="post"
+		onsubmit="saveStudentInfo();return false;">
+		<input type="text" id="firstName" name="firstName"
+			placeholder="First name" autofocus required /><br> <input
+			type="text" name="lastName" placeholder="Last name" /><br> <input
+			type="email" name="emailId" placeholder="abcd@efgh.com" required /><br>
+		<input type="text" name="contactNo" placeholder="(###)-###-####"
+			pattern="\([1-9]{3}\)[-][0-9]{3}[-][0-9]{4}"
+			title="(###)-###-#### : #-numbers" /><br> <input type="text"
+			name="addr1" id="addr1" placeholder="Street Name" required /><br>
+		<input type="text" name="city" placeholder="City Name" /><br> <input
+			type="text" name="state" placeholder="State" required /><br> <input
+			type="text" name="country" placeholder="Country" required /><br>
+		<input type="text" name="zipCode" placeholder="ZipCode" required /><br>
+
+		<input type="submit" value="Submit" />
+	</form>
+
+	<p id="display_msg" hidden="none">
+		<span>Thank You For Submitting The Details!!!</span>
+	</p>
+
+</body>
+</html>

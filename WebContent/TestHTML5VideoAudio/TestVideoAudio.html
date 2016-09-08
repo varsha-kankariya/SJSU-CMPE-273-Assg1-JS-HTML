@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML5 Video/Audio</title>
+<script type="text/javascript" src="TestVideoAudio.js"></script>
+</head>
+<body>
+	<h1>HTML5 Video/Audio</h1>
+	<!--Display the option of audio and video as radio buttons  -->
+	Song: Please select the format(Audio or Video)
+	<br> Audio :
+	<input type="radio" name="mediaOption" value="Audio" />
+	<br> Video :
+	<input type="radio" name="mediaOption" value="Video" />
+	<br>
+	<!-- Submit the user input -->
+	<input type="button" value="Start"
+		onclick="displayUserMedia();return false;" />
+
+	<p>
+		<!-- Space to display the Audio file.Initially it is not displayed -->
+		<span id="audio_media_space" style="display: none;">
+			<!-- Embed the audio file with the default controls provided by HTML5 -->
+			 <audio
+					id="aaa" controls>
+					<source src="aaaa.mp3" type="audio/mp3">
+			</audio>
+		<!-- Space to display the Video file.Initially it is not displayed -->
+		</span> <span id="video_media_space" style="display: none;">
+		   <!-- Embed the video file with the default controls provided by HTML5 -->
+		    <video
+				id="bbb" width="320" height="240" controls>
+				<source src="abcd.mp4" type="video/mp4">
+			</video>
+		</span>
+	</p>
+
+</body>
+</html>
